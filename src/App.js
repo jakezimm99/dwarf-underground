@@ -7,6 +7,7 @@ import ArticleTitle from './ArticleTitle'
 import Article from './Article'
 import HammerAd from './HammerAd'
 import Scams from './Scams'
+import Comments from './Comments'
 
 class App extends Component {
   render() {
@@ -20,10 +21,7 @@ class App extends Component {
           <Author />
           <Article />
           <div className="article-links">
-            <a className="article-link" href="#">
-              <i className="fa fa-comments-o"></i>
-              <span className="article-link-text">Comments</span>
-            </a>
+            <Comments />
             <a className="article-link" href="#">
               <i className="fa fa-share"></i>
               <span className="article-link-text">Share Post</span>
