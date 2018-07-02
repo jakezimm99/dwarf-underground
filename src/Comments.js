@@ -1,20 +1,27 @@
 import React from 'react'
 
 class Comments extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            clicked : null
+        }
+    }
+    
+    handleClick = () => {
+        
+        this.setState({clicked : <input className = "text-box" type = "text"></input>});
+        
+
+    }
     render() {
         return(
-        <a className="article-link" href="#" onClick = {this.handleClick}>
+        <a className="article-link">
             <i className="fa fa-comments-o"></i>
-            <span className="article-link-text">Comments</span>
-            <input className = "text-box" type = "text"></input>
-
+            <button className="article-link-text" onClick = {this.handleClick}>Comments</button>
+            {this.state.clicked}
         </a>
         )
-    }
-
-    handleClick = () => {
-        <input className = "text-box" type = "text"></input>
-        
     }
 }
 
