@@ -5,7 +5,13 @@ import Gold from './Gold'
 import Hobbits from './Hobbits'
 
 const Scams = () => {
-    return (
+
+    // constructor() {
+    //     this.state = {
+
+    //     }
+    // }
+    return ( 
         <div className="small-12 columns other-articles">
             <h2>From around the Realm</h2>
               <Orcs />

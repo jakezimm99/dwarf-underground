@@ -4,22 +4,37 @@ class Comments extends React.Component {
     constructor() {
         super()
         this.state = {
-            clicked : null
+            clicked : null,
+            comments : null
         }
     }
     
     handleClick = () => {
         
-        this.setState({clicked : <input className = "text-box" type = "text"></input>});
-        
+        this.setState({clicked : <form><input className = "text-box" 
+                                        type = "text" 
+                                        placeholder = "Leave a comment..," 
+                                        autoFocus>
+                                        </input>
+                                        <input type = "Submit" value = "Post Comment" 
+                                        onClick =  {false}
+                                        onSubmit = {this.handleSubmit()} >
+                                        </input>
+                                    </form>});
+
+    }
+
+    handleSubmit = () => {
+
 
     }
     render() {
         return(
-        <a className="article-link">
+        <a className="article-link" onClick = {this.handleClick} >
             <i className="fa fa-comments-o"></i>
-            <button className="article-link-text" onClick = {this.handleClick}>Comments</button>
+            <span className="article-link-text" >Comments</span>
             {this.state.clicked}
+            
         </a>
         )
     }
